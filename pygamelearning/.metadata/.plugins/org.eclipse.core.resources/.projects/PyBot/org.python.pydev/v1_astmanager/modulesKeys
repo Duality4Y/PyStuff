@@ -1,0 +1,5 @@
+MODULES_MANAGER_V2
+BotBrain|/home/duality/pygamelearning/PyBot/BotBrain.py
+QuoteSys|/home/duality/pygamelearning/PyBot/QuoteSys.py
+ircBot|/home/duality/pygamelearning/PyBot/ircBot.py
+main|/home/duality/pygamelearning/PyBot/main.py

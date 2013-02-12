@@ -1,0 +1,86 @@
+-- VERSION_3
+-- START DISKCACHE
+/home/duality/pygamelearning/.metadata/.plugins/org.eclipse.core.resources/.projects/pygamescrolling/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+pygamescrollingv3|0|/home/duality/pygamelearning/pygamescrolling/pygamescrollingv3.py
+pygamescrolling|0|/home/duality/pygamelearning/pygamescrolling/pygamescrolling.py
+test|0|/home/duality/pygamelearning/pygamescrolling/test.py
+pygamescrollingv2|0|/home/duality/pygamelearning/pygamescrolling/pygamescrollingv2.py
+pygamescrollingv1|0|/home/duality/pygamelearning/pygamescrolling/pygamescrollingv1.py
+pygamescrollingv4Fun!|0|/home/duality/pygamelearning/pygamescrolling/pygamescrollingv4Fun!.py
+-- END DISKCACHE
+-- START DICTIONARY
+15
+4=pygamescrollingv3
+3=pygamescrollingv2
+6=test
+9=Player
+2=pygamescrollingv1
+8=collisionDetect
+1=pygamescrollingv4Fun!
+7=Player.__init__
+13=Player.reset
+12=Player.controls
+14=Player.FollowPlayer
+10=Particle
+5=pygamescrolling
+15=Player._followPlayer
+11=Particle.__init__
+-- END DICTIONARY
+-- START TREE 1
+26
+acc|5|accel!11@accel!19@accel!27@accel!35@accel!43@
+bac|1|background_colour!51@
+bla|5|black!19@black!27@black!35@black!11@black!43@
+blu|5|blue!11@blue!27@blue!35@blue!19@blue!43@
+bor|5|border!43@border!19@border!27@border!11@border!35@
+col|9|colour!27@colour!35@colour!11@collisionDetect!9@colour!43@collisionDetect!17@collisionDetect!41@collisionDetect!25@collisionDetect!33@
+dra|10|drawCircle2!35@drawCircle1!35@drawLine!11@drawCircle1!11@drawLine!43@drawCircle1!43@drawline!35@drawCircle2!11@drawLine!35@drawCircle2!43@
+fla|5|flags!11@flags!43@flags!35@flags!19@flags!27@
+gre|5|green!27@green!19@green!43@green!35@green!11@
+key|6|keylist!19@keys!19@keylist!27@keylist!11@keylist!43@keylist!35@
+lef|5|leftMouseState!35@leftMouseState!43@leftMouseState!27@leftMouseState!11@leftMouseState!19@
+my_|6|my_players!35@my_players!43@my_particles!51@my_players!19@my_players!27@my_players!11@
+num|6|number_of_players!35@number_of_players!43@number_of_particles!51@number_of_players!11@number_of_players!27@number_of_players!19@
+par|1|Particle!49@
+pla|5|Player!25@Player!17@Player!9@Player!41@Player!33@
+pro|5|processPlayers!10@processPlayers!42@processPlayers!34@processPlayers!26@processPlayers!18@
+qui|3|quit!34@Quit!42@Quit!10@
+red|5|red!19@red!11@red!35@red!43@red!27@
+rig|5|rightMouseState!11@rightMouseState!35@rightMouseState!27@rightMouseState!19@rightMouseState!43@
+run|6|running!11@running!43@running!51@running!35@running!27@running!19@
+scr|6|screen!43@screen!19@screen!27@screen!35@screen!51@screen!11@
+siz|6|size!35@size!27@size!11@size!51@size!19@size!43@
+spe|5|speed!43@speed!35@speed!19@speed!11@speed!27@
+whi|5|white!35@white!27@white!19@white!43@white!11@
+x|6|x!35@x!51@x!27@x!19@x!11@x!43@
+y|6|y!11@y!19@y!43@y!51@y!35@y!27@
+-- END TREE
+-- START TREE 2
+25
+CD|5|CD!7&19@CD!7&35@CD!7&43@CD!7&11@CD!7&27@
+__i|11|__init__!8&18@__init__!9&18@__init__!8&10@__init__!9&10@__init__!8&34@__init__!9&34@__init__!8&26@__init__!9&26@__init__!8&42@__init__!9&42@__init__!10&50@
+_fo|1|_followPlayer!9&18@
+acc|5|accel!7&11@accel!7&19@accel!7&27@accel!7&35@accel!7&43@
+bor|5|border!7&43@border!7&19@border!7&27@border!7&11@border!7&35@
+bou|5|boundery!8&18@boundery!8&42@boundery!8&10@boundery!8&26@boundery!8&34@
+col|5|colour!7&27@colour!11&51@colour!7&35@colour!7&11@colour!7&43@
+con|5|controls!9&26@controls!9&42@controls!9&18@controls!9&34@controls!9&10@
+dis|1|display!10&50@
+dx|15|dx!7&19@dx!12&19@dx!13&19@dx!7&27@dx!12&27@dx!13&27@dx!7&43@dx!12&43@dx!13&43@dx!13&11@dx!12&11@dx!7&11@dx!7&35@dx!12&35@dx!13&35@
+dy|15|dy!13&11@dy!12&11@dy!7&11@dy!7&35@dy!12&35@dy!13&35@dy!7&43@dy!12&43@dy!13&43@dy!7&19@dy!12&19@dy!13&19@dy!7&27@dy!12&27@dy!13&27@
+fol|9|followPlayer!9&18@followPlayer!9&26@followPlayer!9&34@FollowPlayer!9&10@followPlayer!9&42@followPlayer!9&10@FollowPlayer!9&26@FollowPlayer!9&42@FollowPlayer!9&34@
+hit|9|hitPlayer!9&34@hitBoundery!8&26@hitPlayer!9&26@hitBoundery!8&34@hitPlayer!9&10@hitBoundery!8&10@hitBoundery!8&42@hitPlayer!9&18@hitPlayer!9&42@
+inf|5|infiniteBoundery!8&18@infiniteBoundery!8&26@infiniteBoundery!8&34@infiniteBoundery!8&10@infiniteBoundery!8&42@
+pla|5|player!9&34@player!9&42@player!9&26@player!9&18@player!9&10@
+r|5|r!7&11@r!7&43@r!7&19@r!7&35@r!7&27@
+rec|3|rect!9&42@rect!9&10@rect!9&34@
+res|5|reset!9&18@reset!9&34@reset!9&42@reset!9&26@reset!9&10@
+siz|1|size!11&51@
+thi|1|thickness!11&51@
+v|5|v!7&43@v!7&19@v!7&11@v!7&35@v!7&27@
+x|6|x!7&35@x!11&51@x!7&27@x!7&19@x!7&11@x!7&43@
+xw|15|xw!7&43@xw!13&43@xw!14&43@xw!7&35@xw!13&35@xw!14&35@xw!7&19@xw!13&19@xw!15&19@xw!7&27@xw!13&27@xw!14&27@xw!14&11@xw!13&11@xw!7&11@
+y|6|y!7&11@y!7&19@y!7&43@y!11&51@y!7&35@y!7&27@
+yw|15|yw!14&11@yw!13&11@yw!7&11@yw!7&19@yw!13&19@yw!15&19@yw!7&27@yw!13&27@yw!14&27@yw!7&35@yw!13&35@yw!14&35@yw!7&43@yw!13&43@yw!14&43@
+-- END TREE

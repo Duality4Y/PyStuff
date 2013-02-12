@@ -1,0 +1,16 @@
+Hi there! I've found something beautiful by accident here,
+And though i might show ja :)
+somehow it just goes into this acceleration loop :)
+the bounderies (borders) are infinite, you go off one side,
+you end on the other side.
+i generate random properties for every pair of sphere's,
+the sphere's follow each other though. atleast that is what it was meant to do,
+but sometimes they go in orbit or dos something weird, like halfe way a orbit, just go in the opposite direction,
+but this probably is my math :)
+lets add more sphere's :)
+yea that did not do what i expected to do .. :)
+but yea that was it for now ... :)
+
+hi i am back! wanted to show this effect i made :)
+enjoy :) alright 500 pairs that was, controlled with a key and mouse :)
+i could controle either the left side or right side, with the left or right mousebutton :)

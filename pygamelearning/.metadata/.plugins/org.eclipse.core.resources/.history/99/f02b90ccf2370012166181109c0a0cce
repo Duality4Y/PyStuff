@@ -1,0 +1,17 @@
+/*
+ ============================================================================
+ Name        : CProgramming.c
+ Author      : Duality
+ Version     :
+ Copyright   : none
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	puts("learn sdl"); /* prints learn sdl */
+	return EXIT_SUCCESS;
+}

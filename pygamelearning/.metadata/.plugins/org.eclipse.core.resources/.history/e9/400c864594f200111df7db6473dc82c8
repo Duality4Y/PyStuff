@@ -1,0 +1,19 @@
+from pygame.locals import *
+
+class Player(object):
+    def __init__(self,position,fieldstartx,fieldstarty, fieldwidth,fieldheight,radius):
+        self.x = position[0];
+        self.y = position[1];
+        self.r = radius;
+        self.v = 10;
+        self.dx = 0;
+        self.dy = 0;
+        
+        self.fieldstartx = fieldstartx;
+        self.fieldstarty = fieldstarty;
+        self.fieldwidht = fieldwidth;
+        self.fieldheight = fieldheight;
+        
+    def checkControls(self,keylist):
+        keys = pygame.key.get_pressed();
+        

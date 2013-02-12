@@ -1,0 +1,11 @@
+MODULES_MANAGER_V2
+GameObjects|/home/duality/pygamelearning/Gameinpy/GameObjects.py
+Vec2d|/home/duality/pygamelearning/Gameinpy/Vec2d.py
+b1_WORKINISH1|/home/duality/pygamelearning/Gameinpy/b1_WORKINISH1.py
+b2_WORKING3|/home/duality/pygamelearning/Gameinpy/b2_WORKING3.py
+b2_WORKINGISH2|/home/duality/pygamelearning/Gameinpy/b2_WORKINGISH2.py
+b4_WORKING|/home/duality/pygamelearning/Gameinpy/b4_WORKING.py
+b5_working5|/home/duality/pygamelearning/Gameinpy/b5_working5.py
+b6GameObjects|/home/duality/pygamelearning/Gameinpy/b6GameObjects.py
+b6_working6|/home/duality/pygamelearning/Gameinpy/b6_working6.py
+main|/home/duality/pygamelearning/Gameinpy/main.py

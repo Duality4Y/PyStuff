@@ -1,0 +1,27 @@
+import wireframe
+import pygame
+
+class ProjectionViewer:
+    def __init__(self, width, height):
+        self.models = {};
+        self.width = width;
+        self.height = height;
+        self.displayNodes = True;
+        self.displayEdges = True;
+        self.nodeColour = (255,255,255);
+        self.edgeColour = (200,200,200);
+        self.nodeRadius = 4;
+
+width, height = 400,300
+background = (10,10,50)
+
+screen = pygame.display.set_mode((width,height))
+pygame.display.set_caption("wireframe display")
+
+running = True;
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False;
+    screen.fill(background);
+    pygame.display.flip();

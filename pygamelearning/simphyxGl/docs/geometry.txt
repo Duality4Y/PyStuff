@@ -1,0 +1,20 @@
+pygl2d.geometry
+
+PyGL2D's geometry module lets you execute some simple geometry functions, such
+as circle collisions and line collisions. It has some other functions, but
+they're not working correctly right now. Sorry!
+
+geometry.line_collision(a, b) <- return bool
+
+  -- Detects a collision between line a, and line b.
+
+geometry.poly_collision(poly1, poly2) <- return bool
+
+  -- Detects a collision between two polys.
+
+geometry.circle_collision(p1, p2, r1, r2) <- return bool
+
+  -- Detects a collision between 2 circles. p1 and r1 should be the
+  -- position and radius of the first circle, respectively.
+  -- p2 and r2 should be the position and radius of the second circle, 
+  -- respectively.

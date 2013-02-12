@@ -1,0 +1,17 @@
+pygl2d.window
+
+PyGL2D's window module is for setting up the window for drawing.
+
+
+ window.init(size, caption="", flags=DOUBLEBUF)
+
+  --  Initialise the SDL/PyGame window.
+
+ window.begin_draw()
+ 
+  -- Call this right before you begin drawing your
+  -- objects.
+  
+ window.end_draw()
+ 
+  -- And always call this after you're done drawing.

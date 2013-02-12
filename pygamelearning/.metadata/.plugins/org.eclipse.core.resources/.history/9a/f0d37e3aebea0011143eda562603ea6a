@@ -1,0 +1,8 @@
+import wireframe
+import pygame
+
+width, height = 400,300
+background = (10,10,50)
+
+screen = pygame.display.set_mode((width,height))
+pygame.display.set_caption("wireframe display")

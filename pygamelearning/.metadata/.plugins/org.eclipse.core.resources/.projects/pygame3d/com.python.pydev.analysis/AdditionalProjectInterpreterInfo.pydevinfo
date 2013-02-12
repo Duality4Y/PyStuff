@@ -1,0 +1,55 @@
+-- VERSION_3
+-- START DISKCACHE
+/home/robert/pygamelearning/.metadata/.plugins/org.eclipse.core.resources/.projects/pygame3d/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+wireframe|0|/home/robert/pygamelearning/pygame3d/wireframe.py
+main|0|/home/robert/pygamelearning/pygame3d/main.py
+-- END DISKCACHE
+-- START DICTIONARY
+10
+4=Wireframe
+3=ProjectionViewer
+6=Node
+7=ProjectionViewer.__init__
+5=Edge
+2=wireframe
+9=Edge.__init__
+10=Node.__init__
+8=Wireframe.__init__
+1=main
+-- END DICTIONARY
+-- START TREE 1
+10
+bac|1|background!11@
+cub|0|
+edg|1|Edge!17@
+hei|1|height!11@
+nod|1|Node!17@
+pro|1|ProjectionViewer!9@
+run|1|running!11@
+scr|1|screen!11@
+wid|1|width!11@
+wir|1|Wireframe!17@
+-- END TREE
+-- START TREE 2
+19
+!<m|0|
+__i|4|__init__!3&10@__init__!4&18@__init__!5&18@__init__!6&18@
+add|3|addEdges!4&18@addModel!3&10@addNodes!4&18@
+bac|0|
+cub|2|cube_nodes!4&19@cube!4&19@
+dis|2|displayNodes!7&11@displayEdges!7&11@
+edg|2|edges!8&19@edgeColour!7&11@
+hei|1|height!7&11@
+mod|1|models!7&11@
+nod|3|nodeColour!7&11@nodes!8&19@nodeRadius!7&11@
+out|2|outputNodes!4&18@outputEdges!4&18@
+run|0|
+scr|0|
+sta|1|start!9&19@
+sto|1|stop!9&19@
+wid|1|width!7&11@
+x|1|x!10&19@
+y|1|y!10&19@
+z|1|z!10&19@
+-- END TREE

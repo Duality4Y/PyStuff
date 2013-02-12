@@ -1,0 +1,36 @@
+pygl2d.draw
+
+PyGL2D's draw module lets you render graphics primitives, including
+lines, polygons, circles, and rects. It supports antialiasing,
+alpha/transparency, and coloring. Remember colors in this module
+are based on an RGB scale of 0-255.
+
+draw.line(point1, point2, color, width=1, aa=True, alpha=255.0)
+
+  -- Draw a line from point1 to point2. color is the color of the 
+  -- line on an RGB scale, width is the width of the line,
+  -- aa is whether or not to antialias the lines, and alpha is the
+  -- alpha of the line.
+
+draw.lines(points, color, width=1, aa=True, closed=0, alpha=255.0)
+
+  -- Draw a series of lines. Note that the edges of the lines with
+  -- thick widths are "blocky".
+  
+draw.polygon(points, color, aa=True, alpha=255.0)
+
+  -- Draw a filled polygon. This does not suffer from the "blocky"
+  -- artifact.
+
+draw.rect(rectstyle, color, width=0, alpha=255.0)
+
+  -- Draw a rect. rectstyle should be a tuple or list in the style of
+  -- (x, y, width, height). You can use width to set the width of the
+  -- rect's edges (and take out it's color filling)
+
+draw.circle(pos, radius, color, alpha=255.0)
+
+  -- Draw a circle at pos. radius should be the radius of the angle.
+  -- Note that this function is VERY slow, as it is just a series of
+  -- lines drawn at an angle.
+

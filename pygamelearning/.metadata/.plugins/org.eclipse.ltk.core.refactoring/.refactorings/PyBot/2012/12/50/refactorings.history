@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;PyBot/ircBot&apos; to &apos;ircBot.py&apos;" description="Rename resource &apos;ircBot&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ircBot" name="ircBot.py" stamp="1355411755051" updateReferences="true"/>
+</session>

@@ -1,0 +1,22 @@
+-- VERSION_3
+-- START DISKCACHE
+/home/duality/pygamelearning/.metadata/.plugins/org.eclipse.core.resources/.projects/gameoflife/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+main|0|/home/duality/pygamelearning/gameoflife/main.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=main
+-- END DICTIONARY
+-- START TREE 1
+6
+che|8|checkLower!10@checkUpRightCorner!10@checkLowRightCorner!10@checkLeft!10@checkRight!10@checkUpLeftCorner!10@checkLowLeftCorner!10@checkUpper!10@
+fla|1|flags!11@
+lif|1|lifeList!11@
+scr|1|screen!11@
+siz|1|size!11@
+whi|1|white!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

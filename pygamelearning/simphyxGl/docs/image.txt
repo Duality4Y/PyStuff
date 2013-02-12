@@ -1,0 +1,53 @@
+pygl2d.image
+
+The Image object for PyGL2D allows you to load images and draw them.
+It also lets you perform transformations, such as scaling, rotating,
+and coloring. Remember when drawing the image that (0, 0) is the 
+topleft corner of the screen.
+
+class Image(object)
+
+   __init__(filename) <- return None
+
+   -- initialise the Image. filename should be a path to the image file.
+   -- Note that it CAN also be a pygame Surface.
+   
+   delete() <- return None
+   
+   -- delete the image from the memory, including it's
+   -- OpenGL texture.
+     
+   draw(pos) <- return None
+
+   -- draws the image to the main screen at pos. Currently does not support
+   -- drawing to other images.
+
+   scale(scale) <- return None
+
+   -- scale the image where 1.0 is the image's default size.
+
+   rotate(rotation) <- return None
+
+   -- rotate the image to the angle (rotation) given in degrees.
+   -- e.g. image.scale(45)
+ 
+   colorize(r, g, b, a) <- return None
+
+   -- color the image on an RGBA scale of 0-255. If you want to make
+   -- your image transparent, use the "a" value.
+
+   get_width(self) <- return int
+
+   -- returns the width of the original image. Does not provide
+   -- alterations when the image is rotated, but it does support
+   -- alterations in scaling.
+   
+   get_height(self) <- return int
+   
+   -- functions the same as get_width(), only it returns the image's
+   -- height instead of width
+   
+   get_rect(self) <- return rect.Rect
+   
+   -- returns a rect the size of the image.
+

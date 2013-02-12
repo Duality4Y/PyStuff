@@ -1,0 +1,28 @@
+pygl2d.rect
+
+PyGL2D's rect module provides a class similar to pygame's rect. It supports
+floating point numbers, but it misses alot of pygame's rect functions.
+
+class rect.Rect(object)
+
+  __init__(self, x, y, w, h)
+  
+  -- init the Rect. x and y should be its topleft position, and w and h
+  -- should be its width and height.
+  
+  move(dx, dy) <- return Rect
+  
+  -- Create a new rect moved the amount of dx and dy.
+  
+  move_ip(dx, dy)
+  
+  -- Move the rect the amount of dx and dy.
+  
+  colliderect(rect)
+  
+  -- Check for a collision between another rect.
+  
+  collidepoint(point)
+  
+  -- Check for a collision between the rect and a point.
+

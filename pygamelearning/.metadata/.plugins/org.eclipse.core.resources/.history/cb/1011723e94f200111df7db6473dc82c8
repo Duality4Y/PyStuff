@@ -1,0 +1,2 @@
+class Player(object):
+    def __init__(self,position,fieldstartx,fielstarty, fieldwidth,fieldheight,radius):

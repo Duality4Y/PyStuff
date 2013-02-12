@@ -1,0 +1,61 @@
+import pygame
+from pygame.locals import *
+import random
+
+black = (0,0,0);
+size = (width, height) = (600,400)
+screen = pygame.display.set_mode(size);
+
+running = 1;
+
+class Friendly(object):
+    def __init__(self,position, size, color=(255,255,255), width=1):
+        self.position = position;
+        self.size = size;
+        self.width = width;
+        self.color = color;
+        
+        self.step = 1;
+        self.gPosition = position;
+    
+    def draw(self):
+        pygame.draw.circle(screen, self.color, self.position, self.size, self.width);
+        self.move(self.gPosition);
+    
+    def getNewPosition(self,position):
+        self.gPositon = position;
+        self.gPosition[0] = self.gPosition[0]-self.position[0];
+        self.gPosition[1] = self.gPosition[1]-self.position[1];
+    
+    def move(self,gPosition):
+        if self.position[0] != gPosition[0]:
+            self.position[0] += self.step;
+        
+        if self.position[1] != gPosition[1]:
+            self.position[1] += self.step;
+        
+        print "positionx ", self.position[0];
+        print "positiony ", self.position[1];
+        
+
+num_players = 10;
+players=[];
+
+for i in xrange(num_players):
+    size = random.randint(10,15);
+    position = (random.randint(size,width-size), random.randint(size, height-size));
+    players.append(Friendly((position),size,black,1))
+
+while running:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            running = 0;
+        if event.type == MOUSEBUTTONDOWN:
+            for player in players:
+                mPosition = pygame.mouse.get_pos();
+                print "mPosition: ", mPosition;
+                player.getNewPosition(pygame.mouse.get_pos());
+    screen.fill((255,255,255));
+    for player in players:
+        player.draw();
+    pygame.display.flip();

@@ -1,0 +1,49 @@
+pygl2d.font
+
+The PyGL2D RenderText class allows you to render text with pygame fonts.
+It also allows you to perform transformations to it, such as rotation,
+scaling, and coloring.
+
+class RenderText(object)
+
+  __init__(text, color, font)
+ 
+  -- create a text to be rendered.
+  
+  change_text(text, color='default') <- return None
+  
+  -- change the text string. Leave color at 'default' if you want
+  -- to use the previous color.
+  
+  draw(pos)
+  
+  -- draw the text at 'pos'. Note that pos is the topleft of the text.
+  
+  rotate(rotation)
+  
+  -- rotate the text to 'rotation', on a scale of 0-360 degrees.
+  
+  scale(scale)
+  
+  -- scale the text to 'scale', where 1.0 is the default scale of the
+  -- text.
+  
+  colorize(r, g, b, a)
+  
+  -- color the text on an RGBA scale. Remember this uses numeral from
+  -- 0-255.
+  
+  delete()
+  
+  -- Delete the text rendering from the memory, including it's opengl
+  -- textures.
+  
+  get_width, get_height()
+  
+  -- return the text's width and height.
+  
+  get_rect()
+  
+  -- return a rect the size of the text.
+  
+  

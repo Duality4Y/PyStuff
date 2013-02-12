@@ -1,0 +1,90 @@
+import GameObjects
+import pygame
+from pygame.locals import *
+import sys
+
+pygame.init();
+size = width,height = 700,700;
+flags = DOUBLEBUF;
+screen = pygame.display.set_mode((size),flags);
+
+white = (255,255,255);
+black = (0,0,0);
+red = (255,0,0);
+green = (0,255,0);
+blue = (0,0,255);
+
+obstacle1 = 200,200,50,50;
+
+pygame.time.set_timer(USEREVENT+1, 20);
+field = fieldstartx,fieldstarty,fieldwidth,fieldheight = (100,100,width-200,height-200);
+
+obstacleList = [field,obstacle1]
+
+shipSize = 10;
+shipX = fieldstartx+fieldwidth/2;
+shipY = fieldstarty+fieldheight/2;
+
+Player1 = GameObjects.Player((shipX,shipY), fieldstartx,fieldstarty,fieldwidth,fieldheight,shipSize);
+Player2 = GameObjects.Player((shipX+200,shipY), fieldstartx,fieldstarty,fieldwidth,fieldheight,shipSize);
+bulletSize = 3;
+bullet = GameObjects.Projectile(Player1.player()[0],Player1.player()[1],bulletSize, fieldstartx,fieldstarty,fieldwidth,fieldheight);
+
+keylist = [K_LEFT,K_RIGHT,K_UP,K_DOWN,
+           K_a, K_d, K_w, K_s];
+keys = [];
+
+xCD = GameObjects.CollisionDetect();
+
+running = 1;
+while running:
+    for event in pygame.event.get():
+        if event.type == USEREVENT+1:
+            keys = pygame.key.get_pressed();
+            Player1.checkControls(keylist,keys);
+            Player2.checkControls(keylist[4:],keys);
+        if event.type == QUIT:
+            runnig = 0;
+            pygame.quit();
+            sys.exit();
+        if event.type == MOUSEBUTTONDOWN:
+            #if status == true, then bullet flying.
+            #if hit == true, then bullet hit something.
+            if not bullet.status and not bullet.hit:
+                MouseX,MouseY = pygame.mouse.get_pos();
+                print "mousebuttondown: ", MouseX,MouseY;
+                bullet.Shoot(MouseX,MouseY);
+    
+    print "bulletstatus,hit ", bullet.status,bullet.hit;
+    if bullet.hit:
+        bullet.v = 0;
+        bullet.hit = False;
+        bullet.status = False;
+    if not bullet.hit and not bullet.status:
+        (bullet.x,bullet.y) = Player1.player();
+    
+    Player1.x,Player1.y = xCD.Obstacle(Player1.player(), Player1.r, obstacle1)
+    
+    """everything you draw under here."""
+    screen.fill(black);
+    pygame.draw.rect(screen,white,field,1);
+    
+    pygame.draw.rect(screen,white,obstacle1,0);
+    pygame.draw.line(screen,white,Player1.player(),Player2.player(),1);
+    
+    pygame.draw.circle(screen,red,Player1.player(),shipSize,3);
+    pygame.draw.circle(screen,green,Player2.player(),shipSize,3);
+    
+    points = GameObjects.DirectionLine(Player1.player(), Player1.dx, Player1.dy);
+    pygame.draw.line(screen, white,points[0],points[1],1);
+    points = GameObjects.DirectionLine(Player2.player(),Player2.dx,Player2.dy);
+    pygame.draw.line(screen,white,points[0],points[1],1);
+    
+    
+    if GameObjects.getDistance(Player1.player(),Player2.player())<Player1.r+Player2.r:
+        print "ship 1 collided";
+    if GameObjects.getDistance(Player2.player(),Player1.player())<Player2.r+Player1.r:
+        print "ship 2 collided";
+    
+    pygame.draw.circle(screen,(250,250,0),bullet.projectile(), bulletSize, 0);
+    pygame.display.flip();

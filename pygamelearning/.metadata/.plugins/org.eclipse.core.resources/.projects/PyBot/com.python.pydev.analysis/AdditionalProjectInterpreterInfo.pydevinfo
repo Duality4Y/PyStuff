@@ -1,0 +1,54 @@
+-- VERSION_3
+-- START DISKCACHE
+/home/duality/pygamelearning/.metadata/.plugins/org.eclipse.core.resources/.projects/PyBot/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+QuoteSys|0|/home/duality/pygamelearning/PyBot/QuoteSys.py
+BotBrain|0|/home/duality/pygamelearning/PyBot/BotBrain.py
+ircBot|0|/home/duality/pygamelearning/PyBot/ircBot.py
+main|0|/home/duality/pygamelearning/PyBot/main.py
+-- END DISKCACHE
+-- START DICTIONARY
+6
+6=BotBrain.parseCommand
+1=BotBrain
+3=ircBot
+5=ircBot.__init__
+4=BotBrain.leaveChan
+2=main
+-- END DICTIONARY
+-- START TREE 1
+7
+bot|2|BotBrain!9@botowner!19@
+bra|1|brain!19@
+cha|1|channel!19@
+dat|1|data!19@
+irc|1|ircBot!25@
+nic|1|nick!19@
+ser|1|server!19@
+-- END TREE
+-- START TREE 2
+23
+__i|1|__init__!3&26@
+cha|2|channel!4&11@channel!5&27@
+com|2|command!6&11@command!1&11@
+con|1|connect!3&26@
+dat|2|data!6&11@data!1&11@
+exe|1|executeCommand!1&10@
+fou|3|fourthyTwo!1&10@found!6&11@found!1&11@
+get|1|getUserName!3&26@
+irc|1|ircsock!5&27@
+joi|2|joinchan!3&26@join!1&10@
+lea|2|leavechan!3&26@leaveChan!1&10@
+mas|1|master!1&10@
+nic|1|nick!5&27@
+own|1|owner!5&27@
+par|1|parseCommand!1&10@
+pin|1|ping!3&26@
+por|1|port!5&27@
+pri|1|Privmsg!3&26@
+qui|1|quit!1&10@
+rec|1|recieve!3&26@
+say|2|sayName!1&10@say!1&10@
+sen|1|sendmsg!3&26@
+ser|1|server!5&27@
+-- END TREE

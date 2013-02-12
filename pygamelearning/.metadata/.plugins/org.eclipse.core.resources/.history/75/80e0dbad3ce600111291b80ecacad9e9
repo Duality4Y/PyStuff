@@ -1,0 +1,50 @@
+import pygame
+from pygame.locals import *
+import random
+
+black = (0,0,0);
+size = (width, height) = (600,400)
+screen = pygame.display.set_mode(size);
+
+running = 1;
+
+class Friendly(object):
+    def __init__(self,position, size, color=(255,255,255), width=1):
+        self.position = position;
+        self.size = size;
+        self.width = width;
+        self.color = color;
+        
+        self.step = 1;
+        self.gPosition = position;
+    def draw(self):
+        pygame.draw.circle(screen, self.color, self.position, self.size, self.width);
+        self.move(self.gPostion);
+    def getNewPosition(self,position):
+        self.gPositon = position;
+    def move(self,gPosition):
+        if self.position[0] < gPosition[0]:
+            self.position[0] += self.step;
+        if self.postion[1] < gPosition[1]:
+            self.position[1] += self.step;
+        
+
+num_players = 10;
+players=[];
+
+for i in xrange(num_players):
+    size = random.randint(10,100);
+    position = (random.randint(size,width-size), random.randint(size, height-size));
+    pWidth = random.randint(size-10,size);
+    players.append(Friendly((position),size,black,pWidth))
+
+while running:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            running = 0;
+        if event.type == MOUSEBUTTONDOWN:
+            print pygame.mouse.get_pressed();
+    screen.fill((255,255,255));
+    for player in players:
+        player.draw();
+    pygame.display.flip();

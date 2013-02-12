@@ -1,0 +1,22 @@
+from ircBot import ircBot
+from BotBrain import BotBrain
+import sys
+
+server = "irc.freenode.net"
+channel = "#test1123"
+nick = "TestAduaD"
+botowner = "Duality"
+
+
+brain = BotBrain();
+Aduad = ircBot(server,channel,nick,botowner)
+Aduad.connect()
+
+while True:
+    data = Aduad.recieve()
+    brain.parseCommand(data);
+    #if brain.found:
+    #    brain.executeCommand();
+    print "data >> ",data
+
+sys.exit()

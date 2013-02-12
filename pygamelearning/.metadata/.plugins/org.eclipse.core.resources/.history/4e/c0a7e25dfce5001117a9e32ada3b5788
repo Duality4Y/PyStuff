@@ -1,0 +1,32 @@
+import pygame
+from pygame.locals import *
+
+black = (0,0,0);
+size = (width, height) = (600,400)
+screen = pygame.display.set_mode(size);
+
+running = 1;
+
+class Friendly(object):
+    def __init__(self,position, size, color=(255,255,255), width=1):
+        self.position = position;
+        self.size = size;
+        self.width = width;
+        self.color = color;
+    def draw(self):
+        pygame.draw.circle(screen, self.color, self.position, self.size, self.width);
+
+#player1 = Friendly((100,100), 10, black)
+num_players = 10;
+players[]="";
+for n in range(num_players):
+    player1.size = random.random(10,100)
+    player1.position = random.random(size, )
+
+while running:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            running = 0;
+    screen.fill((255,255,255));
+    player1.draw();
+    pygame.display.flip();

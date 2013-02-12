@@ -1,0 +1,7 @@
+import GameObjects
+import pygame
+from pygame.locals import *
+import sys
+
+pygame.init();
+size = width,height = 800,800;

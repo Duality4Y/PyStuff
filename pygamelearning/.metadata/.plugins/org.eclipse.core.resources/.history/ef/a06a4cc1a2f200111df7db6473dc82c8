@@ -1,0 +1,103 @@
+import pygame
+from pygame.locals import *
+
+class Player(object):
+    def __init__(self,position,fieldstartx,fieldstarty, fieldwidth,fieldheight,radius):
+        self.x = position[0];
+        self.y = position[1];
+        self.r = radius;
+        self.v = 10;
+        self.dx = 0;
+        self.dy = 0;
+        
+        self.fieldstartx = fieldstartx;
+        self.fieldstarty = fieldstarty;
+        self.fieldwidht = fieldwidth;
+        self.fieldheight = fieldheight;
+        
+    def checkControls(self,keylist):
+        keys = pygame.key.get_pressed();
+        xw = yw = 0;
+        accel = 0.5;
+        
+        if keys[keylist[0]] == 1:
+            xw = -self.v;
+        if keys[keylist[1]] == 1:
+            xw = self.v;
+        if keys[keylist[2]] == 1:
+            yw = -self.v;
+        if keys[keylist[3]] == 1:
+            yw = self.v;
+        
+        if xw > self.dx:
+            self.dx+=accel;
+        if xw < self.dx:
+            self.dx -= accel;
+        if yw > self.dy:
+            self.dy+=accel;
+        if yw < self.dy:
+            self.dy -= accel;
+        self.dx = round(self.dx,1);
+        self.dy = round(self.dy,1);
+        self.x += self.dx;
+        self.y += self.dy;
+        self.x,self.y = self.bounderyCheck(self.x,self.y,self.r);
+    def bounderyCheck(self,x,y,r):
+        if x <= self.fieldstartx+r:
+            x = self.fieldstartx+r;
+        if x >= self.fieldwidth+self.fieldstartx-r:
+            x = self.fieldwidth+self.fieldstartx-r;
+        if y <= self.fieldstarty+r:
+            y = self.fieldstarty+r;
+        if y >= self.fieldsheight+self.fieldstarty-r:
+            y = self.fieldstarty+self.fieldheight-r;
+        return x,y;
+    def player(self):
+        #we return a tuple of the position the player is currently at.
+        return (int(self.x), int(self.y));
+
+class Projectile(object):
+    def __init__(self,x,y,size,fieldstartx,fieldstarty,fieldwidth,fieldheight):
+        self.x = x;
+        self.y = y;
+        self.r = size;
+        self.v = 0;
+        
+        self.angle = 0;
+        
+        self.fieldstartx = fieldstartx;
+        self.fieldstarty = fieldstarty;
+        self.fieldwidth = fieldwidth;
+        self.fieldheight = fieldheight;
+    def projectile(self):
+        self.move();
+        return (int(self.x),int(self.y));
+    def projectileAdd(self, x,y):
+        dx = x-self.x;
+        dy = y-self.y;
+        self.angle = 0.5*math.pi+math.atan2(dy,dx);
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

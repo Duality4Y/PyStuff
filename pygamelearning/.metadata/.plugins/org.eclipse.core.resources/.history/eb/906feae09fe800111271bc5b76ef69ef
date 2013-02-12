@@ -1,0 +1,88 @@
+import math;
+import pygame;
+from pygame.locals import *;
+import sys;
+
+class Item():
+    def __init__(self, position,direction,radius):
+        self.px = position[0];
+        self.py = position[1];
+        self.dx = direction[0];
+        self.dy = direction[1];
+        self.v = math.sqrt(self.dx*self.dx+self.dy*self.dy);
+        self.r = radius;
+
+class Obstacle(object):
+    def shipCollision(self, position,direction):
+        return None;
+    def boltCollision(self, position,direction):
+        return None;
+
+class Wall(Obstacle):
+    def __init__(self,begin,end):
+        self.px = begin[0];
+        self.py = begin[1];
+        self.dx = end[0]-begin[0];
+        self.dy = end[1]-begin[1];
+    def shipCollision(self, item):
+        divider = (self.dy*item.dx-item.dy*self.dx);
+        itemU = (self.dx*(item.py-self.py)-self.dy*(item.px-self.px))/divider;
+        selfU = (item.dx*(item.py-self.py)-item.dy(item.px-self.px))/divider;
+        if selfU < 0 or selfU > 1:
+            return None; #no wall hit
+        elif selfU >0 and selfU < (self.r+self.s):
+            pass;
+    def boltCollison(self, position,direction):
+        return None;
+
+class ship():
+    def __init__(self):
+        pass;
+    def Controls(self):
+        #maybe make keys a function parameter, to make the code more portable
+        #for none pygame use... 
+        #keys = pygame.key.get_pressed();
+        yw = 0;
+        xw = 0;
+        if keys[K_LEFT] == 1:
+            xw = -self.step;
+        if keys[K_RIGHT] == 1:
+            xw = self.step;
+        if keys[K_UP] == 1:
+            yw = -self.step;
+        if keys[K_DOWN] == 1:
+            yw = self.step;
+        
+        #per timer tick we try to make step 0 or full,
+        #giving a feeling of mass;
+        if xw > self.dx:
+            self.dx+=self.accel;
+        if xw < self.dx:
+            self.dx
+    
+pygame.init();
+size = width, height = 800,600;
+screen = pygame.display.set_mode((size), DOUBLEBUF);
+#fpsClock = pygame.time.Clock();
+#fpsTick = 30;
+#Tick = 1;
+white = (255,255,255);
+black = (0,0,0);
+red = (255,0,0);
+green = (0,255,0);
+blue = (0,0,255);
+
+pygame.time.set_timer(USEREVENT+1, 20);
+
+running = 1;
+while running:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            running = 0;
+            pygame.quit();
+            sys.exit();
+    screen.lock();
+    screen.fill(black);
+    screen.unlock();
+    pygame.display.flip();
+    #fpsClock.tick(fpsTick);

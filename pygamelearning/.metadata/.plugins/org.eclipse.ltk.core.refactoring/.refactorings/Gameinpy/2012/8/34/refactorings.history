@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Gameinpy/b2_WORKINGISH2.PY&apos; to &apos;b2_WORKINGISH2.py&apos;" description="Rename resource &apos;b2_WORKINGISH2.PY&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="b2_WORKINGISH2.PY" name="b2_WORKINGISH2.py" stamp="1345841010434" updateReferences="true"/>
+</session>
